@@ -1,0 +1,3 @@
+{
+  "extends": "@ev-miles/config/tsconfig.base.json"
+}
