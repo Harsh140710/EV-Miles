@@ -7,14 +7,15 @@ const app = express();
 app.use(
   cors({
     origin: env.CORS_ORIGIN,
-    methods: ["GET", "POST", "OPTIONS"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   }),
 );
 
 app.use(express.json());
 
+// Helth-Check Route
 app.get("/", (_req, res) => {
-  res.status(200).send("OK");
+  res.status(200).json({ message: "OK" });
 });
 
 app.listen(3000, () => {
